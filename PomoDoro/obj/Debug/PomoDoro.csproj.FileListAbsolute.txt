@@ -1,0 +1,9 @@
+F:\PROJECTS\WPF\PomoDoro\PomoDoro\bin\Debug\PomoDoro.exe.config
+F:\PROJECTS\WPF\PomoDoro\PomoDoro\obj\Debug\PomoDoro.csprojResolveAssemblyReference.cache
+F:\PROJECTS\WPF\PomoDoro\PomoDoro\obj\Debug\PomoDoro.Form1.resources
+F:\PROJECTS\WPF\PomoDoro\PomoDoro\obj\Debug\PomoDoro.Properties.Resources.resources
+F:\PROJECTS\WPF\PomoDoro\PomoDoro\obj\Debug\PomoDoro.csproj.GenerateResource.Cache
+F:\PROJECTS\WPF\PomoDoro\PomoDoro\bin\Debug\PomoDoro.exe
+F:\PROJECTS\WPF\PomoDoro\PomoDoro\bin\Debug\PomoDoro.pdb
+F:\PROJECTS\WPF\PomoDoro\PomoDoro\obj\Debug\PomoDoro.exe
+F:\PROJECTS\WPF\PomoDoro\PomoDoro\obj\Debug\PomoDoro.pdb
