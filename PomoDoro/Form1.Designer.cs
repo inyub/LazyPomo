@@ -59,6 +59,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtCheatbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMinutes)).BeginInit();
             this.pnlAbout.SuspendLayout();
@@ -389,6 +390,14 @@
             this.label3.Text = "Change Hours:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // txtCheatbox
+            // 
+            this.txtCheatbox.Location = new System.Drawing.Point(120, 363);
+            this.txtCheatbox.Name = "txtCheatbox";
+            this.txtCheatbox.Size = new System.Drawing.Size(228, 20);
+            this.txtCheatbox.TabIndex = 30;
+            this.txtCheatbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCheatbox_KeyDown);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,6 +405,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(398, 411);
+            this.Controls.Add(this.txtCheatbox);
             this.Controls.Add(this.pnlAbout);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -464,6 +474,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtCheatbox;
     }
 }
 

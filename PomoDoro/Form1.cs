@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace PomoDoro
 {
@@ -420,6 +421,30 @@ namespace PomoDoro
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void txtCheatbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+
+               
+                if (txtCheatbox.Text.Contains("/pomo"))
+                {
+                    string cheatboxInput = txtCheatbox.Text;
+                    string cheatboxOutput = cheatboxInput.Substring(cheatboxInput.IndexOf(' '));
+                    int cheatValue;
+                    int.TryParse(cheatboxOutput, out cheatValue);
+                    c = c + cheatValue;
+                    lblPomoCount.Text = c.ToString() + " Pomo Sessions";
+                }
+                else
+                {
+                    MessageBox.Show("What are you doing?", "???", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
+            }   
 
         }
 
