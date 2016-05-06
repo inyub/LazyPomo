@@ -430,7 +430,7 @@ namespace PomoDoro
             {
 
                
-                if (txtCheatbox.Text.Contains("/pomo"))
+                if (txtCheatbox.Text.Contains("/pomo "))
                 {
                     string cheatboxInput = txtCheatbox.Text;
                     string cheatboxOutput = cheatboxInput.Substring(cheatboxInput.IndexOf(' '));
@@ -438,6 +438,20 @@ namespace PomoDoro
                     int.TryParse(cheatboxOutput, out cheatValue);
                     c = c + cheatValue;
                     lblPomoCount.Text = c.ToString() + " Pomo Sessions";
+                }
+                else if (txtCheatbox.Text.Contains("/reset"))
+                {
+                    Application.Restart();
+                }
+                else if (txtCheatbox.Text.Contains("/addHour "))
+                {
+                    string addHourInput = txtCheatbox.Text;
+                    string addHourOutput = addHourInput.Substring(addHourInput.IndexOf(' '));
+                    int addHourValue;
+                    int.TryParse(addHourOutput, out addHourValue);
+                    h = h + addHourValue;
+                    lblPomoTimeAll.Text = "Total Pomo Time " + h + ":" + m + ":" + s;
+
                 }
                 else
                 {
