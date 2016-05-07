@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace PomoDoro
 {
@@ -408,18 +409,48 @@ namespace PomoDoro
             pnlAbout.Location = new System.Drawing.Point(70, 420);
         }
 
-        private void numHours_ValueChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void numMinutes_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void txtCheatbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+
+               
+                if (txtCheatbox.Text.Contains("/pomo "))
+                {
+                    string cheatboxInput = txtCheatbox.Text;
+                    string cheatboxOutput = cheatboxInput.Substring(cheatboxInput.IndexOf(' '));
+                    int cheatValue;
+                    int.TryParse(cheatboxOutput, out cheatValue);
+                    c = c + cheatValue;
+                    lblPomoCount.Text = c.ToString() + " Pomo Sessions";
+                }
+                else if (txtCheatbox.Text.Contains("/reset"))
+                {
+                    Application.Restart();
+                }
+                else if (txtCheatbox.Text.Contains("/addHour "))
+                {
+                    string addHourInput = txtCheatbox.Text;
+                    string addHourOutput = addHourInput.Substring(addHourInput.IndexOf(' '));
+                    int addHourValue;
+                    int.TryParse(addHourOutput, out addHourValue);
+                    h = h + addHourValue;
+                    lblPomoTimeAll.Text = "Total Pomo Time " + h + ":" + m + ":" + s;
+
+                }
+                else
+                {
+                    MessageBox.Show("What are you doing?", "???", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
+            }   
 
         }
 
