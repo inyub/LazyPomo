@@ -20,9 +20,9 @@ namespace PomoDoro
             InitializeComponent();
             lblPomoCount.Text = c.ToString() + " Pomo Sessions";
             lblPomoTime.Text = "Pomo " + mP + ":0" + sP;
-            lblPomoTimeAll.Text = "Total Pomo Time " + h + ":0" + m + ":0" + s ;
+            lblPomoTimeAll.Text = "Total Pomo Time  " + h + ":0" + m + ":0" + s ;
             lblLazyTime.Text = "Lazy " + mL + ":0" + sL;;
-            lblLazyTimeAll.Text = "Total Lazy Time " + h + ":0" + mL_a + ":0" + sL_a;
+            lblLazyTimeAll.Text = "Total Lazy Time  " + h + ":0" + mL_a + ":0" + sL_a;
             this.ClientSize = new System.Drawing.Size(414, 260);
             btnExpand.Text = "Settings";
             timerLazy.Start();
@@ -108,12 +108,12 @@ namespace PomoDoro
             // Checks if 0 has to be displayed on the Pomo Time.
             if (sP < 10)
             {
-                lblPomoTime.Text = "Pomo " + mP + ":0" + sP;
+                lblPomoTime.Text = "Pomo  " + mP + ":0" + sP;
             }
 
             else
             {
-                lblPomoTime.Text = "Pomo " + mP + ":" + sP;
+                lblPomoTime.Text = "Pomo  " + mP + ":" + sP;
             }
             // Checks if 0 has to be displayed on Overall Pomo Time.
             if (s < 10)
@@ -121,11 +121,11 @@ namespace PomoDoro
                 
                 if (m < 10)
                 {
-                    lblPomoTimeAll.Text = "Total Pomo Time " + h + ":0" + m + ":0" + s;
+                    lblPomoTimeAll.Text = "Total Pomo Time  " + h + ":0" + m + ":0" + s;
                 }
                 else
                 {
-                    lblPomoTimeAll.Text = "Total Pomo Time " + h + ":" + m + ":0" + s;
+                    lblPomoTimeAll.Text = "Total Pomo Time  " + h + ":" + m + ":0" + s;
                 }
             }
 
@@ -133,11 +133,11 @@ namespace PomoDoro
             {
                 if (m < 10)
                 {
-                    lblPomoTimeAll.Text = "Total Pomo Time " + h + ":0" + m + ":" + s;
+                    lblPomoTimeAll.Text = "Total Pomo Time  " + h + ":0" + m + ":" + s;
                 }
                 else
                 {
-                    lblPomoTimeAll.Text = "Total Pomo Time " + h + ":" + m + ":" + s;
+                    lblPomoTimeAll.Text = "Total Pomo Time  " + h + ":" + m + ":" + s;
                 }            
             }
 
@@ -157,7 +157,7 @@ namespace PomoDoro
                 btnPomo.Text = "Pause";
                 sL = 0;
                 mL = 0;
-                lblLazyTime.Text = "Lazy " + mL + ":0" + sL;
+                lblLazyTime.Text = "Lazy  " + mL + ":0" + sL;
                 barLazy.Value = 0;
                 
 
@@ -193,7 +193,7 @@ namespace PomoDoro
             this.barPomo.Size = new System.Drawing.Size(390, 10);
             this.barLazy.Size = new System.Drawing.Size(390, 23);
             sL_a++;
-            lblLazyTimeAll.Text = "Total Lazy Time " + mL_a + ":" + sL_a;
+            lblLazyTimeAll.Text = "Total Lazy Time  " + mL_a + ":" + sL_a;
 
             if (sL_a == 60)
             {
@@ -210,7 +210,7 @@ namespace PomoDoro
             if (btnPomo.Text == "Next Pomo!")
             {
                 sL++;
-                lblLazyTime.Text = "Lazy " + mL + ":" + sL; ; //check if conditions later for 0
+                lblLazyTime.Text = "Lazy  " + mL + ":" + sL; ; //check if conditions later for 0
                 barLazy.Increment(1);
 
                 if (sL == 60)
@@ -246,23 +246,23 @@ namespace PomoDoro
             // Checks if 0 has to be displayed on the Lazy Time.
             if (sL < 10)
             {
-                lblLazyTime.Text = "Lazy " + mL + ":0" + sL;
+                lblLazyTime.Text = "Lazy  " + mL + ":0" + sL;
             }
 
             else
             {
-                lblLazyTime.Text = "Lazy " + mL + ":" + sL;
+                lblLazyTime.Text = "Lazy  " + mL + ":" + sL;
             }
             // Checks if 0 has to be displayed on Overall Lazy Time.
             if (sL_a < 10)
             {
                 if (mL_a < 10)
                 {
-                    lblLazyTimeAll.Text = "Total Lazy Time " + hL_a + ":0"+ mL_a + ":0" + sL_a;
+                    lblLazyTimeAll.Text = "Total Lazy Time  " + hL_a + ":0"+ mL_a + ":0" + sL_a;
                 }
                 else
                 {
-                    lblLazyTimeAll.Text = "Total Lazy Time " + hL_a + ":" + mL_a + ":0" + sL_a;
+                    lblLazyTimeAll.Text = "Total Lazy Time  " + hL_a + ":" + mL_a + ":0" + sL_a;
                 }
             }
 
@@ -270,11 +270,11 @@ namespace PomoDoro
             {
                 if (mL_a < 10)
                 {
-                    lblLazyTimeAll.Text = "Total Lazy Time " + hL_a + ":0" + mL_a + ":" + sL_a;
+                    lblLazyTimeAll.Text = "Total Lazy Time  " + hL_a + ":0" + mL_a + ":" + sL_a;
                 }
                 else
                 {
-                    lblLazyTimeAll.Text = "Total Lazy Time " + hL_a + ":" + mL_a + ":" + sL_a;
+                    lblLazyTimeAll.Text = "Total Lazy Time  " + hL_a + ":" + mL_a + ":" + sL_a;
                 }
             }
 
@@ -335,7 +335,87 @@ namespace PomoDoro
            
         }
 
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                richTextBox1.Text = File.ReadAllText(openFileDialog1.FileName);
+                string savedPomo = richTextBox1.Text;
+                //get Pomo Count
+                string savedPomoCount = savedPomo.Substring(0, savedPomo.IndexOf('\n')); 
+                string savedPomoCountNumber = savedPomoCount.Substring(0, savedPomoCount.IndexOf(' '));
+                int.TryParse(savedPomoCountNumber, out c);
+                lblPomoCount.Text = c.ToString() + " Pomo Sessions";
+                //get Pomo Time
+                string savedPomoTime = savedPomo.Substring(savedPomo.IndexOf('\n') + 1, savedPomo.LastIndexOf('\n')- savedPomo.IndexOf('\n'));
+                string savedPomoTimeNumbers = savedPomoTime.Substring(savedPomoTime.LastIndexOf(' ') +1, savedPomoTime.Length - savedPomoTime.LastIndexOf(' ')-1);
+                string savedPomoTimeHour = savedPomoTimeNumbers.Substring(0, savedPomoTimeNumbers.IndexOf(':'));//get hours
+                string savedPomoTimeMinutes = savedPomoTimeNumbers.Substring(savedPomoTimeNumbers.IndexOf(':') + 1, savedPomoTimeNumbers.LastIndexOf(':') - savedPomoTimeNumbers.IndexOf(':')-1);//get minutes
+                string savedPomoTimeSeconds = savedPomoTimeNumbers.Substring(savedPomoTimeNumbers.LastIndexOf(':') + 1, savedPomoTimeNumbers.Length - savedPomoTimeNumbers.LastIndexOf(':') - 1);
+                int.TryParse(savedPomoTimeHour, out h);
+                int.TryParse(savedPomoTimeMinutes, out m);
+                int.TryParse(savedPomoTimeSeconds, out s);
+                if (s < 10)
+                {
 
+                    if (m < 10)
+                    {
+                        lblPomoTimeAll.Text = "Total Pomo Time  " + h + ":0" + m + ":0" + s;
+                    }
+                    else
+                    {
+                        lblPomoTimeAll.Text = "Total Pomo Time  " + h + ":" + m + ":0" + s;
+                    }
+                }
+
+                else
+                {
+                    if (m < 10)
+                    {
+                        lblPomoTimeAll.Text = "Total Pomo Time  " + h + ":0" + m + ":" + s;
+                    }
+                    else
+                    {
+                        lblPomoTimeAll.Text = "Total Pomo Time  " + h + ":" + m + ":" + s;
+                    }
+                }
+
+                //get Lazy Time
+                string savedLazyTime = savedPomo.Substring(savedPomo.LastIndexOf('\n') + 1, savedPomo.Length - savedPomo.LastIndexOf('\n') - 1);
+                string savedLazyTimeNumbers = savedLazyTime.Substring(savedLazyTime.LastIndexOf(' ') + 1, savedLazyTime.Length - savedLazyTime.LastIndexOf(' ') - 1);
+                string savedLazyTimeHour = savedLazyTimeNumbers.Substring(0, savedLazyTimeNumbers.IndexOf(':'));//get hours
+                string savedLazyTimeMinutes = savedLazyTimeNumbers.Substring(savedLazyTimeNumbers.IndexOf(':') + 1, savedLazyTimeNumbers.LastIndexOf(':') - savedLazyTimeNumbers.IndexOf(':') - 1);//get minutes
+                string savedLazyTimeSeconds = savedLazyTimeNumbers.Substring(savedLazyTimeNumbers.LastIndexOf(':') + 1, savedLazyTimeNumbers.Length - savedLazyTimeNumbers.LastIndexOf(':') - 1);
+                int.TryParse(savedLazyTimeHour, out hL_a);
+                int.TryParse(savedLazyTimeMinutes, out mL_a);
+                int.TryParse(savedLazyTimeSeconds, out sL_a);
+                if (sL_a < 10)
+                {
+                    if (mL_a < 10)
+                    {
+                        lblLazyTimeAll.Text = "Total Lazy Time  " + hL_a + ":0" + mL_a + ":0" + sL_a;
+                    }
+                    else
+                    {
+                        lblLazyTimeAll.Text = "Total Lazy Time  " + hL_a + ":" + mL_a + ":0" + sL_a;
+                    }
+                }
+
+                else
+                {
+                    if (mL_a < 10)
+                    {
+                        lblLazyTimeAll.Text = "Total Lazy Time  " + hL_a + ":0" + mL_a + ":" + sL_a;
+                    }
+                    else
+                    {
+                        lblLazyTimeAll.Text = "Total Lazy Time  " + hL_a + ":" + mL_a + ":" + sL_a;
+                    }
+                }
+
+                MessageBox.Show("Save File Loaded", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
 
 
         private void btnEditAction_Click(object sender, EventArgs e)
@@ -353,11 +433,11 @@ namespace PomoDoro
 
                 if (m < 10)
                 {
-                    lblPomoTimeAll.Text = "Total Pomo Time " + h + ":0" + m + ":0" + s;
+                    lblPomoTimeAll.Text = "Total Pomo Time  " + h + ":0" + m + ":0" + s;
                 }
                 else
                 {
-                    lblPomoTimeAll.Text = "Total Pomo Time " + h + ":" + m + ":0" + s;
+                    lblPomoTimeAll.Text = "Total Pomo Time  " + h + ":" + m + ":0" + s;
                 }
             }
 
@@ -365,11 +445,11 @@ namespace PomoDoro
             {
                 if (m < 10)
                 {
-                    lblPomoTimeAll.Text = "Total Pomo Time " + h + ":0" + m + ":" + s;
+                    lblPomoTimeAll.Text = "Total Pomo Time  " + h + ":0" + m + ":" + s;
                 }
                 else
                 {
-                    lblPomoTimeAll.Text = "Total Pomo Time " + h + ":" + m + ":" + s;
+                    lblPomoTimeAll.Text = "Total Pomo Time  " + h + ":" + m + ":" + s;
                 }
             }
 
@@ -377,11 +457,11 @@ namespace PomoDoro
             {
                 if (mL_a < 10)
                 {
-                    lblLazyTimeAll.Text = "Total Lazy Time " + hL_a + ":0" + mL_a + ":0" + sL_a;
+                    lblLazyTimeAll.Text = "Total Lazy Time  " + hL_a + ":0" + mL_a + ":0" + sL_a;
                 }
                 else
                 {
-                    lblLazyTimeAll.Text = "Total Lazy Time " + hL_a + ":" + mL_a + ":0" + sL_a;
+                    lblLazyTimeAll.Text = "Total Lazy Time  " + hL_a + ":" + mL_a + ":0" + sL_a;
                 }
             }
 
@@ -389,11 +469,11 @@ namespace PomoDoro
             {
                 if (mL_a < 10)
                 {
-                    lblLazyTimeAll.Text = "Total Lazy Time " + hL_a + ":0" + mL_a + ":" + sL_a;
+                    lblLazyTimeAll.Text = "Total Lazy Time  " + hL_a + ":0" + mL_a + ":" + sL_a;
                 }
                 else
                 {
-                    lblLazyTimeAll.Text = "Total Lazy Time " + hL_a + ":" + mL_a + ":" + sL_a;
+                    lblLazyTimeAll.Text = "Total Lazy Time  " + hL_a + ":" + mL_a + ":" + sL_a;
                 }
             }
         }
@@ -442,8 +522,12 @@ namespace PomoDoro
                     int addHourValue;
                     int.TryParse(addHourOutput, out addHourValue);
                     h = h + addHourValue;
-                    lblPomoTimeAll.Text = "Total Pomo Time " + h + ":" + m + ":" + s;
+                    lblPomoTimeAll.Text = "Total Pomo Time  " + h + ":" + m + ":" + s;
 
+                }
+                else if (txtCheatbox.Text == "/help")
+                {
+                    MessageBox.Show("/pomo [+Number] - /pomo +5 adds 5 pomo counts. You can use negative values to substract too.  \n\n /reset - resets the application  \n\n /addHour [+Number] - adds hours to your pomo without substracting the amount from lazy time", "Cheatlist", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -453,7 +537,6 @@ namespace PomoDoro
             }   
 
         }
-
 
 
 

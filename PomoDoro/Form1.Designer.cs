@@ -61,6 +61,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtCheatbox = new System.Windows.Forms.TextBox();
             this.btnOpen = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMinutes)).BeginInit();
             this.pnlAbout.SuspendLayout();
@@ -277,9 +278,9 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(-6, 266);
+            this.richTextBox1.Location = new System.Drawing.Point(-6, 258);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(10, 13);
+            this.richTextBox1.Size = new System.Drawing.Size(14, 28);
             this.richTextBox1.TabIndex = 19;
             this.richTextBox1.Text = "";
             this.richTextBox1.Visible = false;
@@ -295,9 +296,9 @@
             // 
             // btnEditTime
             // 
-            this.btnEditTime.Location = new System.Drawing.Point(-6, 311);
+            this.btnEditTime.Location = new System.Drawing.Point(-6, 309);
             this.btnEditTime.Name = "btnEditTime";
-            this.btnEditTime.Size = new System.Drawing.Size(75, 23);
+            this.btnEditTime.Size = new System.Drawing.Size(75, 25);
             this.btnEditTime.TabIndex = 21;
             this.btnEditTime.Text = "Edit";
             this.btnEditTime.UseVisualStyleBackColor = true;
@@ -329,7 +330,7 @@
             // 
             this.btnInfo.Location = new System.Drawing.Point(-6, 334);
             this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(75, 23);
+            this.btnInfo.Size = new System.Drawing.Size(75, 25);
             this.btnInfo.TabIndex = 24;
             this.btnInfo.Text = "About";
             this.btnInfo.UseVisualStyleBackColor = true;
@@ -399,12 +400,17 @@
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(-6, 285);
+            this.btnOpen.Location = new System.Drawing.Point(-6, 284);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(77, 25);
             this.btnOpen.TabIndex = 31;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "myPomo";
             // 
             // Form1
             // 
@@ -413,6 +419,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(398, 411);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.txtCheatbox);
             this.Controls.Add(this.pnlAbout);
             this.Controls.Add(this.label3);
@@ -421,7 +428,6 @@
             this.Controls.Add(this.numHours);
             this.Controls.Add(this.btnEditAction);
             this.Controls.Add(this.numMinutes);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.checkSound);
             this.Controls.Add(this.checkTop);
             this.Controls.Add(this.lblLazyTimeAll);
@@ -485,6 +491,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCheatbox;
         private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
