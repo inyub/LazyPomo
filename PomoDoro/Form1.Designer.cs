@@ -60,6 +60,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCheatbox = new System.Windows.Forms.TextBox();
+            this.btnOpen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMinutes)).BeginInit();
             this.pnlAbout.SuspendLayout();
@@ -294,7 +295,7 @@
             // 
             // btnEditTime
             // 
-            this.btnEditTime.Location = new System.Drawing.Point(-6, 284);
+            this.btnEditTime.Location = new System.Drawing.Point(-6, 311);
             this.btnEditTime.Name = "btnEditTime";
             this.btnEditTime.Size = new System.Drawing.Size(75, 23);
             this.btnEditTime.TabIndex = 21;
@@ -313,7 +314,6 @@
             this.numMinutes.Name = "numMinutes";
             this.numMinutes.Size = new System.Drawing.Size(39, 20);
             this.numMinutes.TabIndex = 22;
-            this.numMinutes.ValueChanged += new System.EventHandler(this.numMinutes_ValueChanged);
             // 
             // btnEditAction
             // 
@@ -327,7 +327,7 @@
             // 
             // btnInfo
             // 
-            this.btnInfo.Location = new System.Drawing.Point(-6, 308);
+            this.btnInfo.Location = new System.Drawing.Point(-6, 334);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.Size = new System.Drawing.Size(75, 23);
             this.btnInfo.TabIndex = 24;
@@ -353,7 +353,6 @@
             this.numHours.Name = "numHours";
             this.numHours.Size = new System.Drawing.Size(39, 20);
             this.numHours.TabIndex = 26;
-            this.numHours.ValueChanged += new System.EventHandler(this.numHours_ValueChanged);
             // 
             // label1
             // 
@@ -398,6 +397,15 @@
             this.txtCheatbox.TabIndex = 30;
             this.txtCheatbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCheatbox_KeyDown);
             // 
+            // btnOpen
+            // 
+            this.btnOpen.Location = new System.Drawing.Point(-6, 285);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(77, 25);
+            this.btnOpen.TabIndex = 31;
+            this.btnOpen.Text = "Open";
+            this.btnOpen.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,6 +437,7 @@
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.btnEditTime);
             this.Controls.Add(this.btnInfo);
+            this.Controls.Add(this.btnOpen);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
@@ -475,6 +484,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCheatbox;
+        private System.Windows.Forms.Button btnOpen;
     }
 }
 

@@ -409,15 +409,7 @@ namespace PomoDoro
             pnlAbout.Location = new System.Drawing.Point(70, 420);
         }
 
-        private void numHours_ValueChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void numMinutes_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void label1_Click(object sender, EventArgs e)
         {
