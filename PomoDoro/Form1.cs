@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace PomoDoro
 {
@@ -25,6 +26,7 @@ namespace PomoDoro
             this.ClientSize = new System.Drawing.Size(414, 260);
             btnExpand.Text = "Settings";
             timerLazy.Start();
+            numMinutes.Value = m;
 
         }
 
@@ -36,14 +38,15 @@ namespace PomoDoro
         int mP = 25;
         int sL = 0;
         int mL = 0;
-        int hL = 0;
         int sL_a = 0;
         int mL_a = 0;
         int hL_a = 0;
+        
 
         // Pomo Timer counts pomo seconds and minutes, and also overall pomo seconds and minutes. + Some optical highlights.
         private void timerPomo_Tick(object sender, EventArgs e)
         {
+            
             this.lblLazyTime.ForeColor = System.Drawing.Color.Gray;
             this.lblLazyTimeAll.ForeColor = System.Drawing.Color.Gray;
             this.lblPomoTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
@@ -333,10 +336,125 @@ namespace PomoDoro
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+        private void btnEditAction_Click(object sender, EventArgs e)
         {
-            
+            int tempswapM = m;
+            m = (int)numMinutes.Value;
+            mL_a = mL_a + (tempswapM - m);
+
+            int tempswapH = h;
+            h = (int)numHours.Value;
+            hL_a = hL_a + (tempswapH - h);
+
+            if (s < 10)
+            {
+
+                if (m < 10)
+                {
+                    lblPomoTimeAll.Text = "Total Pomo Time " + h + ":0" + m + ":0" + s;
+                }
+                else
+                {
+                    lblPomoTimeAll.Text = "Total Pomo Time " + h + ":" + m + ":0" + s;
+                }
+            }
+
+            else
+            {
+                if (m < 10)
+                {
+                    lblPomoTimeAll.Text = "Total Pomo Time " + h + ":0" + m + ":" + s;
+                }
+                else
+                {
+                    lblPomoTimeAll.Text = "Total Pomo Time " + h + ":" + m + ":" + s;
+                }
+            }
+
+            if (sL_a < 10)
+            {
+                if (mL_a < 10)
+                {
+                    lblLazyTimeAll.Text = "Total Lazy Time " + hL_a + ":0" + mL_a + ":0" + sL_a;
+                }
+                else
+                {
+                    lblLazyTimeAll.Text = "Total Lazy Time " + hL_a + ":" + mL_a + ":0" + sL_a;
+                }
+            }
+
+            else
+            {
+                if (mL_a < 10)
+                {
+                    lblLazyTimeAll.Text = "Total Lazy Time " + hL_a + ":0" + mL_a + ":" + sL_a;
+                }
+                else
+                {
+                    lblLazyTimeAll.Text = "Total Lazy Time " + hL_a + ":" + mL_a + ":" + sL_a;
+                }
+            }
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            pnlAbout.Location = new System.Drawing.Point(70, 270);
+            pnlAbout.Visible = true;
+        }
+
+        private void btnEditTime_Click(object sender, EventArgs e)
+        {
+            pnlAbout.Location = new System.Drawing.Point(70, 420);
+        }
+
+
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCheatbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+
+               
+                if (txtCheatbox.Text.Contains("/pomo "))
+                {
+                    string cheatboxInput = txtCheatbox.Text;
+                    string cheatboxOutput = cheatboxInput.Substring(cheatboxInput.IndexOf(' '));
+                    int cheatValue;
+                    int.TryParse(cheatboxOutput, out cheatValue);
+                    c = c + cheatValue;
+                    lblPomoCount.Text = c.ToString() + " Pomo Sessions";
+                }
+                else if (txtCheatbox.Text.Contains("/reset"))
+                {
+                    Application.Restart();
+                }
+                else if (txtCheatbox.Text.Contains("/addHour "))
+                {
+                    string addHourInput = txtCheatbox.Text;
+                    string addHourOutput = addHourInput.Substring(addHourInput.IndexOf(' '));
+                    int addHourValue;
+                    int.TryParse(addHourOutput, out addHourValue);
+                    h = h + addHourValue;
+                    lblPomoTimeAll.Text = "Total Pomo Time " + h + ":" + m + ":" + s;
+
+                }
+                else
+                {
+                    MessageBox.Show("What are you doing?", "???", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
+            }   
+
+        }
+
+
 
 
   
