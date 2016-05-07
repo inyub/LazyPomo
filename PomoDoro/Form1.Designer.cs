@@ -56,11 +56,13 @@
             this.btnInfo = new System.Windows.Forms.Button();
             this.pnlAbout = new System.Windows.Forms.Panel();
             this.numHours = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtCheatbox = new System.Windows.Forms.TextBox();
             this.btnOpen = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.checkChangeHours = new System.Windows.Forms.CheckBox();
+            this.checkChangeMinutes = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMinutes)).BeginInit();
             this.pnlAbout.SuspendLayout();
@@ -277,9 +279,9 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(-6, 266);
+            this.richTextBox1.Location = new System.Drawing.Point(-6, 258);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(10, 13);
+            this.richTextBox1.Size = new System.Drawing.Size(14, 28);
             this.richTextBox1.TabIndex = 19;
             this.richTextBox1.Text = "";
             this.richTextBox1.Visible = false;
@@ -295,9 +297,9 @@
             // 
             // btnEditTime
             // 
-            this.btnEditTime.Location = new System.Drawing.Point(-6, 311);
+            this.btnEditTime.Location = new System.Drawing.Point(-6, 309);
             this.btnEditTime.Name = "btnEditTime";
-            this.btnEditTime.Size = new System.Drawing.Size(75, 23);
+            this.btnEditTime.Size = new System.Drawing.Size(75, 25);
             this.btnEditTime.TabIndex = 21;
             this.btnEditTime.Text = "Edit";
             this.btnEditTime.UseVisualStyleBackColor = true;
@@ -305,21 +307,21 @@
             // 
             // numMinutes
             // 
-            this.numMinutes.Location = new System.Drawing.Point(213, 334);
+            this.numMinutes.Location = new System.Drawing.Point(214, 324);
             this.numMinutes.Maximum = new decimal(new int[] {
             59,
             0,
             0,
             0});
             this.numMinutes.Name = "numMinutes";
-            this.numMinutes.Size = new System.Drawing.Size(39, 20);
+            this.numMinutes.Size = new System.Drawing.Size(44, 20);
             this.numMinutes.TabIndex = 22;
             // 
             // btnEditAction
             // 
-            this.btnEditAction.Location = new System.Drawing.Point(258, 308);
+            this.btnEditAction.Location = new System.Drawing.Point(269, 298);
             this.btnEditAction.Name = "btnEditAction";
-            this.btnEditAction.Size = new System.Drawing.Size(90, 46);
+            this.btnEditAction.Size = new System.Drawing.Size(122, 46);
             this.btnEditAction.TabIndex = 23;
             this.btnEditAction.Text = "Do it!";
             this.btnEditAction.UseVisualStyleBackColor = true;
@@ -329,7 +331,7 @@
             // 
             this.btnInfo.Location = new System.Drawing.Point(-6, 334);
             this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(75, 23);
+            this.btnInfo.Size = new System.Drawing.Size(75, 25);
             this.btnInfo.TabIndex = 24;
             this.btnInfo.Text = "About";
             this.btnInfo.UseVisualStyleBackColor = true;
@@ -341,7 +343,7 @@
             this.pnlAbout.Controls.Add(this.lblDesc);
             this.pnlAbout.Controls.Add(this.lblDescTitle);
             this.pnlAbout.Controls.Add(this.lblCopyright);
-            this.pnlAbout.Location = new System.Drawing.Point(81, 382);
+            this.pnlAbout.Location = new System.Drawing.Point(66, 400);
             this.pnlAbout.Name = "pnlAbout";
             this.pnlAbout.Size = new System.Drawing.Size(324, 152);
             this.pnlAbout.TabIndex = 25;
@@ -349,62 +351,79 @@
             // 
             // numHours
             // 
-            this.numHours.Location = new System.Drawing.Point(213, 308);
+            this.numHours.Location = new System.Drawing.Point(214, 298);
             this.numHours.Name = "numHours";
-            this.numHours.Size = new System.Drawing.Size(39, 20);
+            this.numHours.Size = new System.Drawing.Size(44, 20);
             this.numHours.TabIndex = 26;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(117, 336);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Change Minutes:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
-            this.label2.Location = new System.Drawing.Point(63, 269);
+            this.label2.Location = new System.Drawing.Point(75, 269);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 23);
+            this.label2.Size = new System.Drawing.Size(71, 23);
             this.label2.TabIndex = 28;
-            this.label2.Text = "Edit Pomo Time";
+            this.label2.Text = "Edit Time";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(126, 310);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 13);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Change Hours:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtCheatbox
             // 
-            this.txtCheatbox.Location = new System.Drawing.Point(120, 363);
+            this.txtCheatbox.BackColor = System.Drawing.Color.Gray;
+            this.txtCheatbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCheatbox.Location = new System.Drawing.Point(63, 401);
             this.txtCheatbox.Name = "txtCheatbox";
-            this.txtCheatbox.Size = new System.Drawing.Size(228, 20);
+            this.txtCheatbox.Size = new System.Drawing.Size(374, 20);
             this.txtCheatbox.TabIndex = 30;
             this.txtCheatbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCheatbox_KeyDown);
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(-6, 285);
+            this.btnOpen.Location = new System.Drawing.Point(-6, 284);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(77, 25);
             this.btnOpen.TabIndex = 31;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "myPomo";
+            // 
+            // checkChangeHours
+            // 
+            this.checkChangeHours.AutoSize = true;
+            this.checkChangeHours.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.checkChangeHours.Location = new System.Drawing.Point(85, 298);
+            this.checkChangeHours.Name = "checkChangeHours";
+            this.checkChangeHours.Size = new System.Drawing.Size(112, 17);
+            this.checkChangeHours.TabIndex = 32;
+            this.checkChangeHours.Text = "Rebalance Hours:";
+            this.checkChangeHours.UseVisualStyleBackColor = false;
+            // 
+            // checkChangeMinutes
+            // 
+            this.checkChangeMinutes.AutoSize = true;
+            this.checkChangeMinutes.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.checkChangeMinutes.Location = new System.Drawing.Point(85, 325);
+            this.checkChangeMinutes.Name = "checkChangeMinutes";
+            this.checkChangeMinutes.Size = new System.Drawing.Size(121, 17);
+            this.checkChangeMinutes.TabIndex = 33;
+            this.checkChangeMinutes.Text = "Rebalance Minutes:";
+            this.checkChangeMinutes.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
+            this.label1.Location = new System.Drawing.Point(82, 357);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(309, 40);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Move some Minutes or Hours.\r\nCareful with those numbers though.\r\n\r\n\r\n\r\n";
             // 
             // Form1
             // 
@@ -413,15 +432,16 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(398, 411);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.checkChangeMinutes);
+            this.Controls.Add(this.checkChangeHours);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.txtCheatbox);
             this.Controls.Add(this.pnlAbout);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.numHours);
             this.Controls.Add(this.btnEditAction);
             this.Controls.Add(this.numMinutes);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.checkSound);
             this.Controls.Add(this.checkTop);
             this.Controls.Add(this.lblLazyTimeAll);
@@ -480,11 +500,13 @@
         private System.Windows.Forms.Button btnInfo;
         private System.Windows.Forms.Panel pnlAbout;
         private System.Windows.Forms.NumericUpDown numHours;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCheatbox;
         private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.CheckBox checkChangeHours;
+        private System.Windows.Forms.CheckBox checkChangeMinutes;
+        private System.Windows.Forms.Label label1;
     }
 }
 
