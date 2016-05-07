@@ -420,13 +420,36 @@ namespace PomoDoro
 
         private void btnEditAction_Click(object sender, EventArgs e)
         {
-            int tempswapM = m;
-            m = (int)numMinutes.Value;
-            mL_a = mL_a + (tempswapM - m);
+            if (checkChangeMinutes.Checked == true)
+            {
+                if (numMinutes.Value > mL_a)
+                {
+                    MessageBox.Show("Value has to be <= total lazy minutes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    int tempswapM = m;
+                    m = (int)numMinutes.Value;
+                    if ((mL_a + (tempswapM - m)) < 59)
+                    {
+                        mL_a = mL_a + (tempswapM - m);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Total would be over an hour, can't do that yet.", "Bug prevention.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
+                }
+                
+            }
 
-            int tempswapH = h;
-            h = (int)numHours.Value;
-            hL_a = hL_a + (tempswapH - h);
+            if (checkChangeHours.Checked == true)
+            {
+                int tempswapH = h;
+                h = (int)numHours.Value;
+                hL_a = hL_a + (tempswapH - h);
+            }
+          
 
             if (s < 10)
             {
