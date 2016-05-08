@@ -10,7 +10,6 @@ F:\PROJECTS\WPF\PomoDoro\PomoDoro\obj\Debug\PomoDoro.pdb
 F:\PROJECTS\PomoDoro\PomoDoro\PomoDoro\bin\Debug\PomoDoro.exe.config
 F:\PROJECTS\PomoDoro\PomoDoro\PomoDoro\bin\Debug\PomoDoro.exe
 F:\PROJECTS\PomoDoro\PomoDoro\PomoDoro\bin\Debug\PomoDoro.pdb
-F:\PROJECTS\PomoDoro\PomoDoro\PomoDoro\obj\Debug\PomoDoro.csprojResolveAssemblyReference.cache
 F:\PROJECTS\PomoDoro\PomoDoro\PomoDoro\obj\Debug\PomoDoro.Form1.resources
 F:\PROJECTS\PomoDoro\PomoDoro\PomoDoro\obj\Debug\PomoDoro.Properties.Resources.resources
 F:\PROJECTS\PomoDoro\PomoDoro\PomoDoro\obj\Debug\PomoDoro.csproj.GenerateResource.Cache

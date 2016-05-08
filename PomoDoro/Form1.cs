@@ -505,11 +505,13 @@ namespace PomoDoro
         {
             pnlAbout.Location = new System.Drawing.Point(70, 270);
             pnlAbout.Visible = true;
+            txtCheatbox.Visible = false;
         }
 
         private void btnEditTime_Click(object sender, EventArgs e)
         {
             pnlAbout.Location = new System.Drawing.Point(70, 420);
+            txtCheatbox.Visible = true; 
         }
 
 

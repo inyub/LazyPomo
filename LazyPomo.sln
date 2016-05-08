@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomoDoro", "PomoDoro\PomoDoro.csproj", "{EFE77727-CE37-4BA8-A1F8-FAE247E66E21}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazyPomo", "PomoDoro\LazyPomo.csproj", "{EFE77727-CE37-4BA8-A1F8-FAE247E66E21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

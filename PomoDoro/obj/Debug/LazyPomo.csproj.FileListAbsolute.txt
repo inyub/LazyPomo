@@ -1,0 +1,8 @@
+F:\PROJECTS\PomoDoro\PomoDoro\PomoDoro\bin\Debug\PomoDoro.exe.config
+F:\PROJECTS\PomoDoro\PomoDoro\PomoDoro\bin\Debug\PomoDoro.exe
+F:\PROJECTS\PomoDoro\PomoDoro\PomoDoro\bin\Debug\PomoDoro.pdb
+F:\PROJECTS\PomoDoro\PomoDoro\PomoDoro\obj\Debug\PomoDoro.Form1.resources
+F:\PROJECTS\PomoDoro\PomoDoro\PomoDoro\obj\Debug\PomoDoro.Properties.Resources.resources
+F:\PROJECTS\PomoDoro\PomoDoro\PomoDoro\obj\Debug\LazyPomo.csproj.GenerateResource.Cache
+F:\PROJECTS\PomoDoro\PomoDoro\PomoDoro\obj\Debug\PomoDoro.exe
+F:\PROJECTS\PomoDoro\PomoDoro\PomoDoro\obj\Debug\PomoDoro.pdb

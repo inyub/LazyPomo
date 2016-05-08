@@ -346,7 +346,7 @@
             this.pnlAbout.Location = new System.Drawing.Point(66, 400);
             this.pnlAbout.Name = "pnlAbout";
             this.pnlAbout.Size = new System.Drawing.Size(324, 152);
-            this.pnlAbout.TabIndex = 25;
+            this.pnlAbout.TabIndex = 50;
             this.pnlAbout.Visible = false;
             // 
             // numHours
@@ -432,12 +432,12 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(398, 411);
+            this.Controls.Add(this.pnlAbout);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkChangeMinutes);
             this.Controls.Add(this.checkChangeHours);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.txtCheatbox);
-            this.Controls.Add(this.pnlAbout);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.numHours);
             this.Controls.Add(this.btnEditAction);
